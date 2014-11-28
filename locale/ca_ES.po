@@ -1,0 +1,11 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:product.template,base_code:"
+msgid "Base Code"
+msgstr "Codi base"
+
+msgctxt "help:product.template,base_code:"
+msgid "Base Code Product Template"
+msgstr "Codi base del producte"
