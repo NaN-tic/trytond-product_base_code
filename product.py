@@ -24,3 +24,18 @@ class Template:
                                 prod_vals['code'] = vals['base_code']
                                 break
         return super(Template, cls).create(vlist)
+
+    @classmethod
+    def write(cls, *args):
+        actions = iter(args)
+        args = []
+        for templates, values in zip(actions, actions):
+            if 'base_code' in values:
+                for template in templates:
+                    for product in template.products:
+                        if not product.code:
+                            product.code = values['base_code']
+                            product.save()
+                            break
+            args.extend((templates, values))
+        super(Template, cls).write(*args)
