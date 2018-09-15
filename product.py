@@ -7,8 +7,7 @@ from trytond.pool import PoolMeta
 __all__ = ['Template']
 
 
-class Template:
-    __metaclass__ = PoolMeta
+class Template(metaclass=PoolMeta):
     __name__ = "product.template"
     base_code = fields.Char('Base Code', help='Base Code Product Template')
 
